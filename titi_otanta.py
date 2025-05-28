@@ -12,7 +12,7 @@ odotusarvot = []
 otoskeskihajonnat = []
 
 for i in range(0,100):
-    otos = np.random.choice(list, 10, False)
+    otos = np.random.choice(list, 10, True)
     odotusarvot.append(float(round(np.average(otos),2)))
     otoskeskihajonnat.append(float(round(np.std(otos, ddof=1),2)))
 

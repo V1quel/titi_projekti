@@ -21,8 +21,6 @@ mu0 = np.mean(list)
 sigma0 = np.std(list)
 n = len(list)
 
-print(n)
-
 tunnusluvut.append(n)
 tunnusluvut.append(mu)
 tunnusluvut.append(sigma)
