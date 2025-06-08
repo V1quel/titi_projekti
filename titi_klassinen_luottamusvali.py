@@ -18,9 +18,5 @@ sigma_estimate = tunnusluvut[4]
 CI_lower_limit = mu_estimate-z*(sigma_estimate/np.sqrt(n))
 CI_upper_limit = mu_estimate+z*(sigma_estimate/np.sqrt(n))
 
-print(z)
-print(mu_estimate)
-print(sigma_estimate)
-
-print(CI_lower_limit)
-print(CI_upper_limit)
+print("Luottamusvälin alaraja on:", CI_lower_limit)
+print("Luottamusvälin yläraja on:", CI_upper_limit)
