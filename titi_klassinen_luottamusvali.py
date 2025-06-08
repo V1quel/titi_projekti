@@ -15,11 +15,11 @@ n = tunnusluvut[0]
 mu_estimate = tunnusluvut[3]
 sigma_estimate = tunnusluvut[4]
 
-mu_CI = [float(mu_estimate-z*(sigma_estimate/np.sqrt(n))),
-            float(mu_estimate+z*(sigma_estimate/np.sqrt(n)))]
+mu_CI = [float(round((mu_estimate-z*(sigma_estimate/np.sqrt(n))),2)),
+            float(round((mu_estimate+z*(sigma_estimate/np.sqrt(n))),2))]
 
-sigma_CI = [float(sigma_estimate-z*(sigma_estimate/np.sqrt(n))),
-            float(sigma_estimate+z*(sigma_estimate/np.sqrt(n)))]
+sigma_CI = [float(round((sigma_estimate-z*(sigma_estimate/np.sqrt(n))),2)),
+            float(round((sigma_estimate+z*(sigma_estimate/np.sqrt(n))),2))]
 
 print("Odotusarvon luottamusväli on:", mu_CI)
 print("Keskihajonnan luottamusväli on:", sigma_CI)
