@@ -13,12 +13,12 @@ data = [
 mu = np.random.randint(-100,101)
 sigma = np.random.randint(1,26)
 
-for i in range(0,1000):
+for i in range(0,20):
     x = np.random.normal(mu, sigma)
     list.append(x)
 
 mu0 = np.mean(list)
-sigma0 = np.std(list)
+sigma0 = np.std(list, ddof=1)
 n = len(list)
 
 tunnusluvut.append(n)
