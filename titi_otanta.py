@@ -25,6 +25,9 @@ sigma_label = f"Koko populaation keskihajonta {round(tunnusluvut[2],1)}"
 mu_CI = np.percentile(odotusarvot, [2.5, 97.5])
 sigma_CI = np.percentile(otoskeskihajonnat, [2.5, 97.5])
 
+print("Odotusarvon 95% luottamusväli on", mu_CI)
+print("Keskihajonnan 95% luottamusväli on", sigma_CI)
+
 plt.subplot(1,2,1)
 plt.hist(odotusarvot, bins=25, color='royalblue', edgecolor='black')
 plt.title("Odotusarvojen jakauma")

@@ -15,8 +15,11 @@ n = tunnusluvut[0]
 mu_estimate = tunnusluvut[3]
 sigma_estimate = tunnusluvut[4]
 
-CI_lower_limit = mu_estimate-z*(sigma_estimate/np.sqrt(n))
-CI_upper_limit = mu_estimate+z*(sigma_estimate/np.sqrt(n))
+mu_CI = [float(mu_estimate-z*(sigma_estimate/np.sqrt(n))),
+            float(mu_estimate+z*(sigma_estimate/np.sqrt(n)))]
 
-print("Luottamusvälin alaraja on:", CI_lower_limit)
-print("Luottamusvälin yläraja on:", CI_upper_limit)
+sigma_CI = [float(sigma_estimate-z*(sigma_estimate/np.sqrt(n))),
+            float(sigma_estimate+z*(sigma_estimate/np.sqrt(n)))]
+
+print("Odotusarvon luottamusväli on:", mu_CI)
+print("Keskihajonnan luottamusväli on:", sigma_CI)
